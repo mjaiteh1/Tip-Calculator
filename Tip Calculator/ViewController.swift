@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var tipController: UISegmentedControl!
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
@@ -30,7 +31,15 @@ class ViewController: UIViewController {
     @IBAction func calculateTip(_ sender: Any) {
         //Set the label dynamically when user enters value.
         //Drag UI Label
-        let bill = billField.text
+        let tipPercentages = [0.18, 0.2, 0.25]
+        let bill = Double(billField.text!) ?? 0
+        // If whatever on the left returns a nill then return zero
+        let tip = bill * tipPercentages[tipController.selectedSegmentIndex]
+        let total = bill + tip
+        
+        tipLabel.text = String(format: "$%.2f",tip)
+        totalLabel.text = String(format: "$%.2f",total)
+        
     }
 }
 

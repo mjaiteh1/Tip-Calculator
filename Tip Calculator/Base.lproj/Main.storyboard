@@ -54,14 +54,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNY-Jq-01S">
-                                <rect key="frame" x="298" y="186" width="46" height="21"/>
+                                <rect key="frame" x="298" y="186" width="61" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCs-uz-BlH">
-                                <rect key="frame" x="299" y="331" width="45" height="21"/>
+                                <rect key="frame" x="299" y="331" width="76" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -75,6 +75,9 @@
                                     <segment title="20% "/>
                                     <segment title="25%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="xPp-RV-xHy"/>
+                                </connections>
                             </segmentedControl>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="0SK-8S-R2t">
                                 <rect key="frame" x="39" y="300" width="305" height="2"/>
@@ -101,6 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="billField" destination="tfe-sb-g5b" id="DoV-iJ-YLM"/>
+                        <outlet property="tipController" destination="Nn1-Qd-Jrd" id="dTj-8v-5Tt"/>
                         <outlet property="tipLabel" destination="HNY-Jq-01S" id="Zfj-hl-t10"/>
                         <outlet property="totalLabel" destination="vCs-uz-BlH" id="UGn-nY-EWk"/>
                     </connections>
@@ -112,7 +116,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="415" y="-31"/>
+            <point key="canvasLocation" x="413.60000000000002" y="-31.03448275862069"/>
         </scene>
     </scenes>
 </document>
