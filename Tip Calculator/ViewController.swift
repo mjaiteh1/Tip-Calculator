@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        // Sets the title in the Navigation Bar
+        self.title = "Tip Calculator"
+
     }
 
     override func didReceiveMemoryWarning() {
